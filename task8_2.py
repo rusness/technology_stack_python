@@ -1,12 +1,11 @@
-N = int(input("Введите число N: "))
+n = int(input())
+arr = list(map(int, input().split()))
 
-numbers = []
-for i in range(N):
-    number = int(input())
-    numbers.append(number)
+temp = arr[-1]
 
-for i in range(N//2):
-    numbers[i], numbers[N-i-1] = numbers[N-i-1], numbers[i]
+for i in range(n-2, -1, -1):
+    arr[i+1] = arr[i]
 
-for number in numbers:
-    print(number)
+arr[0] = temp
+
+print(*arr)
