@@ -1,5 +1,5 @@
-n = int(input())
-arr = list(map(int, input().split()))
+n = int(input("Введиче кол-вл чсиле N:"))
+arr = list(map(int, input("Введите числа через пробел: ").split()))
 
 temp = arr[-1]
 
