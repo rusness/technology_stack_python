@@ -6,12 +6,10 @@ class Transport:
     def __str__(self):
         return f"Название автомобиля:{self.name} Скорость:{self.max_speed} Пробег:{self.mileage}"
 
-class Autobus(Transport):
-    pass
 
 
-a = Autobus("Рено", 120, 10000)
-print(a)
+Autobus = Transport("Рено", 120, 10000)
+print(Autobus)
 
 
     
