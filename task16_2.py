@@ -28,17 +28,16 @@ class Turtle:
     def count_moves(self, x2, y2):
         x_diff = abs(x2 - self.x)
         y_diff = abs(y2 - self.y)
-        total_moves = (x_diff // self.s) + (y_diff // self.s)
-        if x_diff % self.s != 0:
-            total_moves += 1
-        if y_diff % self.s != 0:
-            total_moves += 1
+        if x_diff % self.s == 0 and y_diff % self.s == 0:
+            total_moves = (x_diff // self.s) + (y_diff // self.s)
+        else:
+            total_moves = 0
         return total_moves
 
-a = Turtle(1,1,1)
+a = Turtle(0,0,1)
 a.go_up()
 a.go_up()
 a.evolve()
 print(a.y, a.x)
 
-print(a.count_moves(-1,-1))
+print(a.count_moves(5,5))
